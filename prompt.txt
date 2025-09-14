@@ -1,1 +1,0 @@
-baseado no projeto atual, criar um exemplo que abstrai a informação do arquivo CSV e grava essa informação no banco vetor milvus. Utilize como modelo de referência o artigo do endereço https://jimmy-wang-gen-ai.medium.com/milvus-a-complete-example-of-how-to-use-vectordb-by-python-and-serve-it-as-an-api-3a05e2f8db3c como estrutura semelhante.
