@@ -97,15 +97,34 @@ Na interface do Attu, você poderá explorar todas as oito coleções criadas.
 ## Estrutura de Arquivos
 
 ```
-.milvus/
+milvus/
 ├── data/
 │   └── diario_uniao.csv
 ├── src/
-│   ├── ... (7 scripts de modelos locais)
-│   └── load_data_openai.py
-├── docker-compose.yml
-├── requirements.txt
-├── ... (7 scripts de verificação locais)
-├── verify_data_openai.py
-└── README.md
+│   ├── load_data.py                    # MiniLM-L6-v2
+│   ├── load_data_l12.py               # MiniLM-L12-v2
+│   ├── load_data_mpnet.py             # MPNet-base-v2
+│   ├── load_data_roberta.py           # RoBERTa-large
+│   ├── load_data_t5.py                # GTR-T5-large
+│   ├── load_data_bert_pt.py           # BERT-PT
+│   ├── load_data_xlm_roberta.py       # XLM-RoBERTa
+│   ├── load_data_openai.py            # OpenAI Ada-002
+│   ├── verify_data.py                 # Verificação MiniLM-L6-v2
+│   ├── verify_data_l12.py             # Verificação MiniLM-L12-v2
+│   ├── verify_data_mpnet.py           # Verificação MPNet-base-v2
+│   ├── verify_data_roberta.py         # Verificação RoBERTa-large
+│   ├── verify_data_t5.py              # Verificação GTR-T5-large
+│   ├── verify_data_bert_pt.py         # Verificação BERT-PT
+│   ├── verify_data_xlm_roberta.py     # Verificação XLM-RoBERTa
+│   └── verify_data_openai.py          # Verificação OpenAI Ada-002
+├── volumes/                           # Dados persistentes do Docker
+│   ├── etcd/                         # Dados do Etcd
+│   ├── milvus/                       # Dados do Milvus
+│   └── minio/                        # Dados do MinIO
+├── .env                              # Variáveis de ambiente
+├── artigo_projeto_milvus.md          # Artigo técnico detalhado
+├── docker-compose.yml                # Configuração da infraestrutura
+├── milvus.png                        # Imagem da arquitetura
+├── requirements.txt                  # Dependências Python
+└── README.md                         # Documentação do projeto
 ```
